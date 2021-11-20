@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:css": "postcss public/tailwind.css -o public/style.css -w",
-    "build:css": "cross-env NODE_ENV=production postcss public/tailwind.css -o public/style.css",
+    "watch:css": "postcss public/css/tailwind.css -o public/css/style.css -w",
+    "build:css": "cross-env NODE_ENV=production postcss public/css/tailwind.css -o public/css/style.css",
     "dev": "concurrently \"nodemon index\" \"npm run watch:css\"",
-    "build": "npm run build:css && node index"
+    "build": "npm run build:css && node index",
+    "serve": "node index"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "concurrently": "^6.3.0",
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.10",
+    "dotenv": "^10.0.0",
     "nodemon": "^2.0.15",
     "postcss": "^8.3.11",
     "postcss-cli": "^9.0.2",
